@@ -1,0 +1,110 @@
+.teacher h2::after {
+    position: absolute;
+    content: "";
+    width: 10%;
+    height: 4px;
+    background-color: #1e5dc3;
+    bottom: -5px;
+    left: 46%;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    width: 100% !important;
+    overflow: hidden;
+    transition: .5s ease;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px;
+    opacity: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.over:hover .overlay {
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    opacity: 1;
+}
+
+
+ 
+
+.overlay ul {
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.overlay ul li {
+    list-style: none;
+    margin: 5px;
+    border: 1px solid;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: .5s;
+}
+.overlay ul li:hover{
+    background-color: #1e5dc3;
+    color: #fff;
+    border: none;
+    transition: .5s;
+}
+
+
+// .login-container {
+//     width: 300px;
+//     margin: 0 auto;
+//     padding: 20px;
+//     border: 1px solid #ccc;
+//     border-radius: 5px;
+//     background-color: #f9f9f9;
+//   }
+  
+//   h2 {
+//     text-align: center;
+//   }
+  
+//   input[type="text"],
+//   input[type="password"] {
+//     width: 100%;
+//     padding: 10px;
+//     margin-bottom: 10px;
+//     border: 1px solid #ccc;
+//     border-radius: 3px;
+//   }
+  
+//   button {
+//     width: 100%;
+//     padding: 10px;
+//     border: none;
+//     border-radius: 3px;
+//     background-color: #4CAF50;
+//     color: #fff;
+//     font-size: 16px;
+//     cursor: pointer;
+//   }
+  
+//   button:disabled {
+//     background-color: #ccc;
+//     cursor: not-allowed;
+//   }
+  
+//   .error {
+//     color: red;
+//     margin-top: 10px;
+//   }
+  

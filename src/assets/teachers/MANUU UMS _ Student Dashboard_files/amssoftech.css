@@ -1,0 +1,513 @@
+﻿body {
+}
+
+header {
+
+    padding:10px 0px 0px 250px;
+}
+
+header img{
+
+   padding:20px 20px 24px;
+   margin-bottom:20px;
+}
+
+.drop-menu {
+
+    left:auto !important;
+    right:8px;
+}
+
+.top-head {
+
+    background-color: white;
+    border-bottom: 1px solid green;
+}
+
+.side-bar {
+
+    width: 280px !important; 
+    height:100% !important;
+}
+
+.sm {
+
+    font-size:24px;
+    color:#ffffff;
+    float:left;
+    margin-top:-8px;
+}
+
+.sm:hover {
+
+    color:#808080;
+}
+
+
+.side-nav .collapsible-header {
+
+    line-height:40px !important;
+    font-size:17px;
+}
+
+.side-nav .collapsible-header:hover {
+
+    color:#ffffff;
+}
+
+.collapsible li:hover {
+
+    background:#EF5350 !important;
+}
+
+.side-nav .collapsible-header i{
+
+    font-size:22px;
+    margin-right:5px;
+}
+
+.side-nav a {
+    
+    line-height:20px !important;
+    padding:15px 5px 10px 25px !important;
+    height: 50px !important;
+    font-size:18px !important;
+    float:left;
+    width:100%;
+    border-bottom: 1px solid #e6e6e6;
+}
+
+.side-nav a:hover {
+    
+    background-color:green;
+    color:#ffffff !important;
+}
+
+.header {
+
+
+}
+
+.header img{
+
+    margin:0px 0px 8px !important;
+    padding:0px !important;
+
+}
+
+.footer {
+
+    text-align:center;
+    background-color: green;
+    padding: 15px 0px;
+    position:absolute;
+    width:100%;
+    bottom: 0px;
+    color:#fff;
+}
+
+.acc {
+
+    margin:20px 0px;
+}
+
+.body {
+
+    padding:10px 0px 0px 250px;
+}
+
+.collection .collection-item.avatar {
+
+    min-height:62px !important;
+}
+
+.collection .collection-item.avatar:hover {
+
+    background:#f8f5f5;
+}
+
+.collection .collection-item.avatar a{
+
+    font-size:22px !important;
+    float:left;
+    padding-top:10px;
+    color:#EF5350;
+}
+
+.dash-bg {
+
+    text-align:center;
+    background-color:#fff;
+    box-shadow:0px 0px 1px 1px #d4d4d4;
+    padding:25px 0px 15px;
+    margin-bottom:20px;
+}
+
+.dash-bg:hover {
+
+    background-color:#eee;
+}
+
+.dash-bg i{
+
+    color:green;
+    font-size:42px;
+}
+
+.dash-bg p{
+
+    font-size:20px;
+    margin: 8px 0px;
+    color:#3c3c3c;
+}
+
+
+
+.login-bg {
+
+    /*background:url(img/bg.jpg) center;*/
+    background-color:#333;
+}
+
+
+.login {
+
+    width:400px;
+    margin:80px auto;
+    background-color:#fff;
+    padding:30px 50px 20px 30px;
+}
+
+.login h1{
+
+    margin:0px 0px 20px;
+    text-align:center;
+    padding-bottom:9px;
+    border-bottom:1px solid #d2d2d2;
+    font-size:28px;
+}
+
+.login p{
+
+    font-family:Calibri;
+    text-align:center;
+    font-size:14px;
+    margin-bottom:20px !important;
+}
+
+.login h1 a{
+
+    color:#000000;
+    padding-bottom:6px;
+    padding-left:15px;
+    padding-right:17px;
+    border-bottom:3px solid #1dae0b;
+}
+
+.login h1 a:hover, .login h1 a:focus, .login h1 a:active{
+    
+    color:#000000;
+    text-decoration:none;
+}
+
+.login h3{
+
+    margin:0px;
+    text-align:center;
+    color:#1dae0b;
+    font-family:Calibri;
+    font-size: 20px;
+    margin-bottom:15px;
+}
+
+.login i{
+
+    color:#ff0000;
+    font-size: 10px;
+}
+
+.select-bx {
+
+    border: 1px solid #ccc !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
+    height: 39px !important;
+    padding: 0px 8px !important;
+    width:106% !important;
+    margin-bottom:15px;
+}
+
+.txt-bx {
+
+    border: 1px solid #ccc !important;
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075) !important;
+    height: 35px !important;
+    padding: 0px 8px !important;
+}
+
+.lab-bx {
+
+    top: 0.5rem !important;
+    left: 1.5em !important;
+}
+
+.forgot {
+
+    float:right;
+    color:#9e9e9e;
+    margin-top:13px;
+}
+
+
+.forgot1 {
+
+    float:left;
+    color:#9e9e9e;
+}
+
+.login button{
+
+    width:100%;
+    border:none;
+    background-color:#30ba08;
+    padding:5px;
+    font-size:18px;
+    color:#ffffff;
+    margin:10px 0px;
+}
+
+.sign {
+
+    width:100%;
+    background-color:#26a69a;
+    border:none;
+    color:#ffffff;
+    padding:15px 5px 15px 15px;
+    font-size:18px;
+    text-align:left;
+}
+
+.heading {
+
+    margin:0px;
+    font-size:22px;
+    border-bottom:1px solid #DBDBDB;
+    padding-bottom:6px;
+    margin-bottom:20px;
+}
+
+table td, table th {
+
+    border: 1px solid #d0d0d0;
+    padding:5px 15px;
+}
+
+.dwon {
+
+    background-color:green;
+    border:none;
+    color:#ffffff;
+    padding:5px 10px;
+}
+
+/*.dwon:hover, .dwon:focus, .dwon:active   {
+
+    background-color:#089608;
+}*/
+
+.pagination i {
+
+    padding-top:15px;
+}
+
+.bg {
+
+    margin-bottom:30px;
+}
+
+.bg table td{
+
+    padding:10px;
+}
+
+
+.pad {
+
+    height:70px;
+}
+
+table{
+
+    margin-bottom:20px;
+}
+
+table label{
+
+    color:#000;
+    font-size:15px;
+}
+
+.table-txt {
+
+    margin:0px !important;
+}
+
+.table-txt input{
+
+    height:40px !important;
+    margin-bottom:0px !important;
+    border-bottom: none !important;
+}
+
+.table-txt label{
+    
+    top: 1.4rem !important;
+    left: 0.01rem !important;
+    font-size:13px !important;
+}
+
+.act-pin {
+
+    font-size: 16px;
+    float: left;
+    margin: 23px 20px 0px;   
+}
+
+.margin {
+
+    margin:0px !important;
+}
+
+.margin .input-field{
+
+    padding:0px !important;
+}
+
+.mar {
+
+    margin-top:30px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:479px) {
+
+    
+.login {
+
+    width:280px;
+    margin:15px auto;
+    padding:15px 30px 1px;
+}
+
+}
+
+
+@media (max-width:990px) {
+
+ 
+.side-bar {
+
+    width: 250px !important; 
+    height:100% !important;
+}
+
+    .side-nav .collapsible-header {
+    
+        margin:0px 0rem !important;
+    }
+
+
+}
+
+
+
+
+
+
+
+@media (max-width:1000px) {
+
+    
+header {
+
+    padding:10px 0px 0px 0px;
+}
+
+.header img{
+
+    margin:0px 0px 0px !important;
+
+}
+
+.acc {
+
+    margin:10px 0px 10px;
+}
+
+.body {
+
+    padding:10px 0px 0px 0px;
+}
+
+
+
+}
+
+
+
+
+
+
+
+.alert {
+    padding: 15px;
+    border: 1px solid transparent;
+    border-radius: 4px
+}
+.alert-success {
+    background-color: #dff0d8;
+    border-color: #d6e9c6;
+    color: #3c763d
+}
+.alert-dismissable,
+.alert-dismissible {
+    padding-right: 35px
+}
+.alert-dismissable .close,
+.alert-dismissible .close {
+    position: relative;
+    top: -2px;
+    right: -21px;
+    color: inherit
+}
+
+.close {
+    float: right;
+    font-size: 21px;
+    line-height: 1;
+    color: #000;
+    text-shadow: 0 1px 0 #fff;
+    opacity: .2;
+    filter: alpha(opacity=20)
+}
+
+
+
+
+
+
+
+

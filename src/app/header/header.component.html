@@ -1,0 +1,109 @@
+<section>
+    <nav    id="common-header" class="navbar navbar-expand-lg fixed-top" style="z-index: 999;position: fixed;width: 100%;">
+      <div class="container-fluid">
+        <div style="display: flex;">
+          <div style="display: flex;align-items: center;">
+            <a class="navbar-brand" href="#" style="color: #000;font-weight: 700;"><img src="../../assets/logoo.png"
+                alt="" style="width: 20%;"></a>
+          </div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
+        <div style="margin-left: auto;">
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item ">
+                <a class="nav-link " aria-current="page" (click)="navigateTo('HOME')">Home</a>
+              </li>
+              <li  class="nav-item dropdown2">
+                <a class="nav-link" (click)="navigateTo('COURCES')">About</a>
+                <!-- <ul style="list-style: none;position: absolute;background-color: #fff;margin: 0;padding: 0;"
+                  class="course">
+                  <li>Course 1</li>
+                  <li>Course 2</li>
+                  <li>Course 3</li>
+                  <li>Course 4</li>
+                  <li>Course 5</li>
+                </ul> -->
+              </li>
+              <li  class="nav-item">
+                <a  class="nav-link " aria-disabled="true" (click)="navigateTo('SHEDULE')">Offer</a>
+              </li>
+              <li class="nav-item dropdown1">
+                <a class="nav-link" (click)="navigateTo('TEACHER')">Teachers</a>
+                <!-- <div class="features"
+                  style="display: flex;position: absolute;top: 60px;right: 13%;padding: 12px 20px; background-color: #fff;border-top: 3px solid green;">
+                  <ul style="border-right: 1px solid #c2bebe;">
+                    <li>Teacher Profile</li>
+                    <li>Student Profile</li>
+                    <li>Question Types</li>
+                    <li>Media File Manager</li>
+                    <li>Assignments</li>
+                    <li>Google Classrooms</li>
+                  </ul>
+                  <ul style="border-right: 1px solid #c2bebe;">
+                    <li>Course Summary</li>
+                    <li>H5P</li>
+                    <li>SCORM Integration</li>
+                    <li>Course Attachment</li>
+                    <li>Gradebook</li>
+                    <li>Zoom Lesson</li>
+                  </ul>
+                  <ul>
+                    <li>Quiz Review</li>
+                    <li>Points Reward</li>
+                    <li>Live Streaming</li>
+                    <li>Bundles</li>
+                    <li>Group Courses</li>
+                    <li>Memberships</li>
+                  </ul>
+                </div> -->
+              </li>
+  
+              <li class="nav-item">
+                <a class="nav-link " aria-disabled="true">Packages</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link " aria-disabled="true">Contact</a>
+              </li>
+              <li class="nav-item ">
+                <a data-bs-toggle="modal" data-bs-target="#exampleModal" class="nav-link " aria-disabled="true"><i class="fa fa-search" style="color: #fff;"></i></a>
+              </li>
+              <li  class="nav-item" style="position: relative;" (click)="openlogin()">
+                <a class="nav-link" aria-disabled="true" >Login &nbsp;&nbsp;| &nbsp;&nbsp;Register</a>
+                <ul class="log-in" style="position: absolute;list-style: none;display: none;" id="loginmodal">
+                  <li style="border-bottom: 1px solid #eeecec;" (click)="navigateTologin()">User Login</li>
+                  <li (click)="navigateToteacherlogin()">Institute Login</li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+  </section>
+
+
+ 
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content" style="background-color: transparent;">
+      <!-- <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div> -->
+      <div class="modal-body" style="margin: 0;padding: 0;background-color: transparent;">
+        <input #agInput autocomplete=""  style="width: 100%;padding: 10px;border-radius: 25px;
+        border: 1px solid transparent;" type="search" placeholder="Search" st>
+      </div>
+      <!-- <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div> -->
+    </div>
+  </div>
+</div>

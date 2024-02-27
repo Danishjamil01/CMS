@@ -1,0 +1,222 @@
+<section id="header" >
+    <div style="background-color: #444;" class="tab">
+        <ul style="list-style: none;display: flex;">
+            <li (click)="ChangeFilterTab('profile')" class="filter-tab" id="profile">Profile</li>
+            <li class="filter-tab" (click)="ChangeFilterTab('attendance')" id="attendance">Attendance</li>
+            <li (click)="navigateTologout()">Logout</li>
+        </ul>
+    </div>
+</section>
+<section id="Attendance" *ngIf="showTabBar==='attendance'">
+    <div class="container">
+        <div style="border: 1px solid #d9d2d2;">
+            <div
+                style="border: 1px solid #d9d2d2;padding: 5px;background-color: #f1f1f1; border-top: none;border-right: none;border-left: none;">
+                <p>Overall Student Attendance Status</p>
+            </div>
+            <br>
+            <div style="display: flex;padding: 0 10px;">
+                <div>
+                    Show <select name="" id="" style="outline: none;border-color: #d9d2d2;">
+                        <option value="10">5</option>
+                        <option value="10">10</option>
+                        <option value="10">15</option>
+                        <option value="10">20</option>
+                    </select> entries
+                </div>
+                <div style="margin-left: auto;">
+                    <span>search:</span>&nbsp;<input type="search" style="border-color: #d9d2d2;outline: none;">
+                </div>
+            </div>
+            <br>
+            <div>
+                <table>
+                    <tr *ngFor="let head of header">
+                        <th>{{head.sno}}</th>
+                        <th>{{head.photo}}</th>
+                        <th>{{head.class}}</th>
+                        <th>{{head.rollNo}}</th>
+                        <th>{{head.StudentName}}</th>
+                        <th>{{head.AttendancePercentage}}</th>
+                        <th style="border-right: none;">{{head.Action}}</th>
+
+                    </tr>
+                    <tr *ngFor="let column of cols">
+                        <td>{{ column.sno }}</td>
+                        <td>
+                            <img style="height: 45px;width: 45px;border-radius: 50%;" src="{{ column.photo }}" alt="">
+                        </td>
+                        <td>{{ column.class }}</td>
+                        <td>{{ column.rollNo }}</td>
+                        <td>{{ column.StudentName }}</td>
+                        <td>{{ column.AttendancePercentage }}</td>
+                        <td class="pencil" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
+                            style="cursor: pointer;position: relative;border-right: none;">
+                            <div >
+                                <i class="bi bi-pencil"> </i>
+                            </div>
+
+                            <div style="position: absolute;left: -30%;top: 30%;">
+                                <div style="position: relative;" class="angle">
+                                    <span style="background-color: #999;padding: 10px !important;color: #fff;">
+                                        Modify
+                                    </span>
+                                    <div class="triangle-down" style="position: absolute;">
+
+                                    </div>
+                                </div>
+                            </div>
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div style="display: flex;padding: 5px;">
+                <div>
+                    <p>Showing result</p>
+                </div>
+                <div style="margin-left: auto; display: flex;" class="page">
+                    <button>Previous</button>
+                    <button>1</button>
+                    <button>2</button>
+                    <button style="border-right: 1px  solid #b8b5b5;">Next</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <br><br>
+</section>
+<section id="Profile" *ngIf="showTabBar==='profile'">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm-3">
+                <div>
+                    <img src="../../assets/teachers/20.jpg" alt="" style="width: 100%;">
+                </div><br>
+                <div>
+                    <h5>Contact info</h5>
+                </div>
+                <hr>
+                <span style="font-size: 17px;">E-mail: cms@gmail.com</span><br>
+                <span style="font-size: 17px;">Phone: +918645641558</span>
+
+                <div class="icon">
+                    <ul>
+                        <li><i class="bi bi-facebook"></i></li>
+                        <li><i class="bi bi-twitter"></i></li>
+                        <li><i class="bi bi-linkedin"></i></li>
+                        <li><i class="bi bi-envelope"></i></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-sm-9">
+                <div>
+                    <h5>Virat Kohli</h5>
+                </div>
+                <hr>
+
+
+                <div style="display: flex;" *ngFor="let teacher of teacherInfo">
+                    <div>
+                        <ul class="info-icon" style="line-height: 35px;padding: 0;">
+                            <li><i class="fa fa-graduation-cap"></i>&nbsp;&nbsp;Degree</li>
+                            <li><i class="fa fa-star"></i>&nbsp;&nbsp; Experience</li>
+                            <li><i class="fa fa-heart"></i>&nbsp;&nbsp; Hobbies</li>
+                            <li><i class="fa fa-bookmark"></i>&nbsp;&nbsp; My Courses</li>
+                        </ul>
+                    </div>
+                    <div style="margin-left: 2%;">
+                        <ul class="info-icon" style="line-height: 35px;padding: 0;">
+                            <li>{{teacher.degree}}</li>
+                            <li>{{teacher.experience}}</li>
+                            <li>{{teacher.hobbies}}</li>
+                            <li>{{teacher.courses}}</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-3">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus odit repudiandae laudantium.
+                    Tempore amet quidem tenetur nisi, dolorum numquam voluptatum? Error laboriosam obcaecati perferendis
+                    earum maiores expedita iusto necessitatibus eaque!
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus odit repudiandae laudantium.
+                    Tempore amet quidem tenetur nisi, dolorum numquam voluptatum? Error laboriosam obcaecati perferendis
+                    earum maiores expedita iusto necessitatibus eaque!
+                </div>
+                <br>
+                <div class="mt-3">
+                    <div class="row">
+                        <div class="col-sm-6">
+                            <h5>My Shedule</h5>
+                            <hr>
+                            <div style="display: flex;" *ngFor="let shedule of teacher">
+                                <div style="width: 100%;">
+                                    <ul style="list-style: none;padding: 0;line-height: 50px;width: 100%;" class="day">
+                                        <div style="display: flex;">
+                                            <li>Monday</li>
+                                            <li style="margin-left: auto;display: flex;justify-content: end;">
+                                                {{shedule.monday}}</li>
+                                        </div>
+                                        <div style="display: flex;">
+                                            <li>Tuesday</li>
+                                            <li style="margin-left: auto;display: flex;justify-content: end;">
+                                                {{shedule.tuesday}}</li>
+                                        </div>
+                                        <div style="display: flex;">
+                                            <li>Wednesday</li>
+                                            <li style="margin-left: auto;display: flex;justify-content: end;">
+                                                {{shedule.wednesday}}</li>
+                                        </div>
+                                        <div style="display: flex;">
+                                            <li>Thursday</li>
+                                            <li style="margin-left: auto;display: flex;justify-content: end;">
+                                                {{shedule.thursday}}</li>
+                                        </div>
+                                        <div style="display: flex;">
+                                            <li>Friday</li>
+                                            <li style="margin-left: auto;display: flex;justify-content: end;">
+                                                {{shedule.friday}}</li>
+                                        </div>
+                                        <div style="display: flex;">
+                                            <li>Saturday</li>
+                                            <li style="margin-left: auto;display: flex;justify-content: end;">
+                                                {{shedule.saturday}}</li>
+                                        </div>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-6">
+                            <h5>My Shedule</h5>
+                            <hr>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- <section id="logout" style="visibility: hidden;">
+<h1>Coaching Management System</h1>
+</section> -->
+
+<!-- action modal -->
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="staticBackdropLabel">Modal title</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                ...
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- action modal -->

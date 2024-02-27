@@ -1,0 +1,38 @@
+<br><br><br>
+<section style="margin-top: 20px;">
+    <div class="container">
+        <i class="fa fa-home"></i>/ <span>TEACHER</span>
+    </div>
+    <br><br>
+    <div class="container">
+        <div class="teacher" style="text-align: center;position: relative;">
+            <h2 style="font-size: 45px;font-weight: 700;letter-spacing: 1px;">OUR EXPERIENCED TEACHERS</h2>
+        </div>
+        <br>
+        <div class="row">
+            <div class="col-sm-3 mt-3" *ngFor="let teacher of teacherInfo">
+                <div style="border: 1px solid #dad6d6;" class="over">
+                    <div style="position: relative;" class="count">
+                        <img src="{{teacher.img}}" alt=""
+                            style="height: 250px;width: 100%;border-bottom: 1px solid #dad6d6;">
+                    <div class="overlay">
+                        <ul>
+                            <li><i class="fa fa-facebook"></i></li>
+                            <li><i class="fa fa-twitter"></i></li>
+                            <li><i class="fa fa-linkedin"></i></li>
+                        </ul>
+                    </div>
+                        </div>
+                    <div style="padding: 5px;">
+                        <p><span style="font-weight: 500;font-weight: 18px;">Name:</span>{{teacher.name}}</p>
+                        <p><span style="font-weight: 500;font-weight: 18px">Age:</span>{{teacher.age}}</p>
+                        <p><span style="font-weight: 500;font-weight: 18px">Qualification:</span>{{teacher.qualification}}</p>
+                        <p><span style="font-weight: 500;font-weight: 18px">Institution:</span>{{teacher.institution}}</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+    <br><br>
+</section>

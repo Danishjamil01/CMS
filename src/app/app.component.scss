@@ -1,0 +1,51 @@
+.icons{
+    list-style: none;
+    transition: .5s;
+}
+.icons:hover{
+    transform: scale(1.1);
+    transition: .5s;
+}
+.icons{
+  height: 30px;
+  width: 30px;
+  background-color: #1e5dc3;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  & i{
+    color: #fff;
+  }
+}
+// .social-icon ul{
+   
+// }
+.icons{
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+.plus span{
+    height: 40px;
+    width:40px;
+    background-color: #1e5dc3;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.plus:hover .social-icon ul li{
+color: #1e5dc3 !important;
+}
+
+// .social-icon ul li {
+//     transition: transform 0.3s ease;
+//   }
+  
+//   .social-icon ul li:hover {
+//     transform: translate(10px, 20px);
+//   }
+  

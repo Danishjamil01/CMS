@@ -1,0 +1,630 @@
+<section>
+    <div style="overflow-x: hidden;" class="heading-carousel">
+        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideConfig">
+            <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+                <div
+                    style="background-image:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)), url({{slide.img}});width: 100%;display: flex;align-items: center;justify-content: center;height: 100vh; background-size: 100% 100%">
+                    <div class="carousel-text text-center" style="text-align: center;">
+                        <h3><span data-aos="fade-left" data-aos-duration="1000">{{slide.text1}}&nbsp;</span> <span
+                                data-aos="fade-up" data-aos-duration="400">{{slide.text6}}</span>&nbsp;<span
+                                data-aos="fade-right" data-aos-duration="300">{{slide.text7}}</span></h3>
+                        <p class="mt-2" style="padding: 0;margin: 0;font-size: 20px;color: #fff;" data-aos="fade-left"
+                            data-aos-duration="1000">{{slide.text8}}</p>
+                        <br><br>
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-sm-3" data-aos="fade-right" data-aos-duration="2500">
+                                    <h1 style="color: #838c48;">{{slide.text_1}}</h1>
+                                    <span style="color: #fff;">{{slide.text_2}}</span>
+                                </div>
+                                <div class="col-sm-3" data-aos="fade-up" data-aos-duration="2000">
+                                    <h1 style="color: #838c48;">{{slide.text_3}}</h1>
+                                    <span style="color: #fff;">{{slide.text_4}}</span>
+                                </div>
+                                <div class="col-sm-3" data-aos="fade-down" data-aos-duration="1500">
+                                    <h1 style="color: #838c48;">{{slide.text_5}}</h1>
+                                    <span style="color: #fff;">{{slide.text_6}}</span>
+                                </div>
+                                <div class="col-sm-3" data-aos="fade-left" data-aos-duration="1000">
+                                    <h1 style="color: #838c48;">{{slide.text_7}}</h1>
+                                    <span style="color: #fff;">{{slide.text_8}}</span>
+                                </div>
+                            </div>
+                        </div>
+                        <h3>{{slide.text2}}</h3>
+                        <h3>{{slide.text3}}</h3>
+                        <h3>{{slide.text4}}</h3>
+                        <h3>{{slide.text5}}</h3>
+                    </div>
+                </div>
+
+            </div>
+        </ngx-slick-carousel>
+    </div>
+    <br><br>
+
+
+  
+
+
+
+
+    <div style="text-align: center;position: relative;" class="cources">
+        <h1 data-aos="fade-left" data-aos-duration="2000" style="font-size: 50px;font-weight: 700;">POPULAR COURSES</h1>
+    </div>
+    <div class="container" style="padding: 25px;">
+        <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slideimg">
+            <div ngxSlickItem *ngFor="let images of offers" class="slide" style="margin: 10px;">
+                <div class="scale"
+                    style="position: relative;transition: .5s;z-index: 999;overflow-x: hidden;overflow-y: hidden;border: 1px solid #cecdcd;border-radius: 6px;">
+                    <img src="{{ images.img }}" alt="" width="100%" height="200px"
+                        style="border-radius: 5px 5px 0 0;transition: .5s;">
+                    <div style="background-color: #fff;padding: 15px 11px;">
+                        <h1 style="font-size: 15px;padding: 10px 0;">{{images.text}}</h1>
+                        <p style="margin: 0;padding: 0;font-size: 14px;">{{images.paragraph}}</p>
+                        <p style="margin: 0;padding: 0;margin-top: 3px;font-size: 14px">{{images.paragraph3}}</p>
+                    </div>
+                    <div>
+                        <div style="display: flex;align-items: center;background-color: #d4d0d0;padding: 10px;">
+                            <div>
+                                <span
+                                    style="text-decoration: line-through ;color: #706e6e;">{{images.oldPrice}}</span><br>
+                                <span style="font-weight: 500;">{{images.newPrice}}</span>
+                            </div>
+                            <div style="margin-left: auto;" class="apply-btn">
+                                <button style="font-weight: 700;
+                                border: 1px solid #838c48;
+                                font-size: 14px;
+                                padding: 4px 15px;
+                                border-radius: 4px;color: #838c48" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">{{images.button}}</button>
+                            </div>
+                        </div>
+                        <div></div>
+                    </div>
+                </div>
+            </div>
+        </ngx-slick-carousel>
+    </div>
+    <div>
+        <div class="row">
+            <div class="col-sm-6">
+                <img data-aos="fade-up" data-aos-duration="2000" src="../../assets/home/chhose.jpg" alt=""
+                    style="width: 102%;">
+            </div>
+            <div data-aos="fade-right" data-aos-offset="300" data-aos-easing="ease-in-sine" class="col-sm-6"
+                style="background-color: #EEF1F7;display: flex;align-items: center;justify-content: center;">
+                <div>
+                    <div>
+                        <h2>
+                            Pick a Course That Makes Your Life
+                        </h2>
+                        <p style="margin: 0;padding: 0;font-size: 20px;font-weight: 300;">
+                            Looking for your next favorite course?<br>
+                            Find our freshest content here. Discover <br> new horizons. Gain knowledge <br> makes a
+                            mind-blowing
+                            change in your life. <br> Ready? Let’s get started!
+                        </p><br>
+                        <button class="all-cources" (click)="navigateTocources()">
+                            VIEW ALL COURCSES
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br><br>
+
+
+
+
+    <section>
+        <div style="text-align: center;position: relative;text-align: center;" class="cources mt-3">
+            <h1 style="font-size: 30PX;font-weight: 700;text-align: center; " data-aos="fade-down"
+                data-aos-duration="2000">OUR EXPERIENCED TEACHERS</h1>
+        </div>
+        <br>
+        <div style="overflow-x: hidden;margin-top: 10px;" class="heading-carousel">
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slidepic">
+                <div ngxSlickItem *ngFor="let teacher of teachers" class="slide">
+                    <div style="display: flex;justify-content: center;">
+                        <img src="{{teacher.img}}" alt="" style="width: 200px;height: 200px;border-radius: 50%;">
+                    </div>
+                    <div>
+                        <p style="padding: 0;margin: 0;text-align: center;">{{teacher.text}}</p>
+                    </div>
+
+                </div>
+            </ngx-slick-carousel>
+            <br>
+            <div class="more">
+                <button (click)="navigateToteacher()">View More</button>
+            </div>
+        </div>
+    </section>
+
+
+
+
+    <section>
+        <div style="text-align: center;position: relative;text-align: center;" class="cources mt-3">
+            <h1 style="font-size: 30PX;font-weight: 700;text-align: center;" data-aos="fade-up"
+                data-aos-duration="2000">OUR SUCCESSFULL STUDENT</h1>
+        </div>
+        <br>
+        <div style="overflow-x: hidden;margin-top: 10px;" class="heading-carousel">
+            <ngx-slick-carousel class="carousel" #slickModal="slick-carousel" [config]="slidepics">
+                <div ngxSlickItem *ngFor="let student of students" class="slide">
+                    <div style="display: flex;justify-content: center;">
+                        <img src="{{student.img}}" alt="" style="width: 200px;height: 200px;border-radius: 50%;">
+                    </div>
+                    <div>
+                        <p style="padding: 0;margin: 0;text-align: center;">{{student.text}}</p>
+                    </div>
+                </div>
+            </ngx-slick-carousel>
+            <br>
+            <div class="more">
+                <button (click)="navigateTostudent()">View More</button>
+            </div>
+        </div>
+    </section>
+    <br>
+
+
+
+
+
+    <div>
+        <div class="row" style="background-color: #eef1f7;">
+
+            <div class="col-sm-6">
+                <br><br>
+                <div style="border-right: 1px solid;">
+                    <div style="width: 100%;display: flex;" data-aos="fade-down" data-aos-duration="2000">
+                        <div style="width: 30%;display: flex;justify-content: end;">
+                            <img src="../../assets/home/03.png" alt="" style="width: 40%;">
+                        </div>
+                        <div style="width: 70%;">
+                            <span style="font-size: 35px;font-weight: 500;">Learners, Start Here</span><br>
+                        <span style="color: #2A3045;
+                                font-family:  Sans-serif;
+                                font-size: 18px;
+                                font-weight: 400;
+                                line-height: 28px;">Take the first step toward your new career or <br> hobby.</span>
+                        </div>
+                    </div>
+                    <br>
+                    <div style="text-align: center;">
+                        <button class="start" data-aos="fade-up" data-aos-duration="2000">
+                            START LEARNING
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <br><br>
+                <div style="width: 100%;display: flex;" data-aos="fade-down" data-aos-duration="2000">
+                    <div style="width: 30%;display: flex;justify-content: end;">
+                        <img src="../../assets/home/04.png" alt="" style="width: 40%;">
+                    </div>
+                    <div style="width: 70%;">
+                        <span style="font-size: 35px;font-weight: 500;">Teachers, Start Here</span><br>
+                        <span style="color: #2A3045;
+                            font-family:  Sans-serif;
+                            font-size: 18px;
+                            font-weight: 400;
+                            line-height: 28px;">Teach what you love. Masterstudy gives you the tools to create a
+                            course.</span>
+                    </div>
+                </div>
+                <br>
+                <div style="text-align: center;">
+                    <button class="start" data-aos="fade-up" data-aos-duration="2000">
+                        START TEACHING
+                    </button>
+                </div>
+                <br><br>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+<!-- course Registration modal -->
+
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-scrollable modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Course Registration Form</h5>
+                <div id="close">
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div style="display: none;" id="back" (click)="goBack()">
+                    <i class="fa fa-arrow-left"></i>
+                </div>
+            </div>
+            <div class="modal-body" id="form">
+                <div id="register">
+                    <p style="padding: 0;margin: 0;">Fill Out The Form Carefully For Regisration <sup
+                            style="color: rgb(114, 4, 4);font-size: 20px;">*</sup></p>
+                    <br><br>
+                    <div class="container">
+                        <span style="font-size: 18px;font-weight: 500;">Student Name</span><br>
+
+                        <div class="row mt-3">
+                            <div class="col-sm-4">
+                                <input type="text" style="width: 100%;" required>
+                                <span class="mt-1" style="font-size: 14px;">First Name</span>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" style="width: 100%;" required>
+                                <span class="mt-1" style="font-size: 14px;">Middle Name</span>
+                            </div>
+                            <div class="col-sm-4">
+                                <input type="text" style="width: 100%;" required>
+                                <span class="mt-1" style="font-size: 14px;">Last name</span>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <span style="font-size: 18px;font-weight: 500;">Birth Date</span><br>
+                                <div class="row mt-3">
+                                    <div class="col-sm-4">
+                                        <select name="" id="" style="width: 100%;">
+                                            <option value="">January</option>
+                                            <option value="">February</option>
+                                            <option value="">March</option>
+                                            <option value="">April</option>
+                                            <option value="">May</option>
+                                            <option value="">June</option>
+                                            <option value="">July</option>
+                                            <option value="">August</option>
+                                            <option value="">September</option>
+                                            <option value="">October</option>
+                                            <option value="">November</option>
+                                            <option value="">December</option>
+                                        </select>
+                                        <span class="mt-1" style="font-size: 14px;">Month</span>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <select name="" id="" style="width: 100%;">
+                                            <option value="">01</option>
+                                            <option value="">02</option>
+                                            <option value="">03</option>
+                                            <option value="">04</option>
+                                            <option value="">05</option>
+                                            <option value="">06</option>
+                                            <option value="">07</option>
+                                            <option value="">08</option>
+                                            <option value="">09</option>
+                                            <option value="">10</option>
+                                            <option value="">11</option>
+                                            <option value="">12</option>
+                                            <option value="">13</option>
+                                            <option value="">14</option>
+                                            <option value="">15</option>
+                                            <option value="">16</option>
+                                            <option value="">17</option>
+                                            <option value="">18</option>
+                                            <option value="">19</option>
+                                            <option value="">20</option>
+                                            <option value="">21</option>
+                                            <option value="">22</option>
+                                            <option value="">23</option>
+                                            <option value="">24</option>
+                                            <option value="">25</option>
+                                            <option value="">26</option>
+                                            <option value="">27</option>
+                                            <option value="">28</option>
+                                            <option value="">29</option>
+                                            <option value="">30</option>
+                                            <option value="">31</option>
+                                        </select>
+                                        <span class="mt-1" style="font-size: 14px;">Day</span>
+                                    </div>
+                                    <div class="col-sm-4">
+                                        <select name="" id="" style="width: 100%;">
+                                            <option value="">2000</option>
+                                            <option value="">2001</option>
+                                            <option value="">2002</option>
+                                            <option value="">2003</option>
+                                            <option value="">2004</option>
+                                            <option value="">2005</option>
+                                            <option value="">2006</option>
+                                            <option value="">2007</option>
+                                            <option value="">2008</option>
+                                            <option value="">2009</option>
+                                            <option value="">2010</option>
+                                            <option value="">2011</option>
+                                            <option value="">2012</option>
+                                            <option value="">2013</option>
+                                            <option value="">2014</option>
+                                            <option value="">2015</option>
+                                            <option value="">2016</option>
+                                            <option value="">2017</option>
+                                            <option value="">2018</option>
+                                            <option value="">2019</option>
+                                            <option value="">2020</option>
+                                            <option value="">2021</option>
+                                            <option value="">2022</option>
+                                            <option value="">2023</option>
+                                        </select>
+                                        <span class="mt-1" style="font-size: 14px;">year</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <span style="font-size: 18px;font-weight: 500;">Gender</span><br>
+                                <select name="" id="" style="width: 100%;" class="mt-3">
+                                    <option value="">Please Select</option>
+                                    <option value="">Male</option>
+                                    <option value="">Female</option>
+                                    <option value="">N/A</option>
+                                </select>
+                            </div>
+                        </div>
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <span style="font-size: 18px;font-weight: 500;">Student E-mail</span>
+                                <input type="text" style="width: 100%;" class="mt-3" required>
+                            </div>
+                            <div class="col-sm-6">
+                                <span style="font-size: 18px;font-weight: 500;">Stuent Mobile Number</span>
+                                <input type="text" style="width: 100%;" placeholder="(000) 000-0000" class="mt-3"
+                                    required>
+                            </div>
+                        </div>
+
+
+
+                        <br>
+                        <div class="row">
+                            <div class="col-sm-6">
+                                <span style="font-size: 18px;font-weight: 500;">Courses</span>
+                                <select name="" id="" style="width: 100%;" class="mt-2">
+                                    <option value="">PYTHON</option>
+                                    <option value="">JAVA</option>
+                                    <option value="">C++</option>
+                                    <option value="">HTML</option>
+                                    <option value="">JAVASCRIPT</option>
+                                    <option value="">PHYSICS</option>
+                                    <option value="">CHEMESTRY</option>
+                                    <option value="">MATH</option>
+                                    <option value="">ENGLISH</option>
+                                    <option value="">PHP</option>
+                                    <option value="">PHOTOGRAPHY</option>
+                                    <option value="">HISTORY</option>
+                                    <option value="">CREATIVE WRITING</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6"></div>
+                        </div>
+                        <br><br>
+                        <div style="display: flex;align-items: center;justify-content: center;">
+                            <button type="submit"
+                                style="border:1px solid #838c48;background-color: #838c48;color: #fff;padding: 8px;border-radius: 5px;"
+                                (click)="goToPayment()">Go
+                                to payment section</button>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div style="display: none;" id="payment" class="container-fluid">
+                    <div class="row">
+                        <div class="col-sm-8">
+                            <div>
+                                <h4>Online Pay</h4>
+                                <br>
+                                <span style="font-size: 17px;font-weight: 500;">Card Number</span>
+                                <p style="font-size: 12px;color: #958e8e;">Enter the 16 digit card number on the card
+                                </p>
+                                <div class="mt-3"
+                                    style="display: flex;position: relative; align-items: center; border: 1px solid #958e8e;border-radius: 5px;  width:100%;height: 42px;">
+                                    <input class="otp" type="" placeholder="----" id="mobileotp3" #mobileotp3
+                                        (keyup)="(mobileotp3.value.length == 4) ? mobileotp4.focus() : ''"
+                                        onKeyPress="if(this.value.length==4) return false;" maxlength="4">-
+                                    <input class="otp" type="" placeholder="----" id="mobileotp4" #mobileotp4
+                                        (keyup)="(mobileotp4.value.length == 4) ? mobileotp5.focus() : ''"
+                                        onKeyPress="if(this.value.length==4) return false;" maxlength="4">-
+                                    <input class="otp" type="" placeholder="----" id="mobileotp5" #mobileotp5
+                                        (keyup)="(mobileotp5.value.length == 4) ? mobileotp6.focus() : ''"
+                                        onKeyPress="if(this.value.length==4) return false;" maxlength="4">-
+                                    <input class="otp" type="" placeholder="----" placeholder="" id="mobileotp6"
+                                        #mobileotp6 onKeyPress="if(this.value.length==4) return false;" maxlength="4">
+                                    <div style="position: absolute;right: 0;">
+                                        <img src="../../assets/cources/successful.gif" alt="" width="20%">
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-sm-6">
+                                        <span style="font-size: 17px;font-weight: 500;"> CVV Number</span>
+                                        <p style="font-size: 12px;color: #958e8e;border-radius: 5px; ">Enter The 3 digit
+                                            On The Card</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div
+                                            style="border: 1px solid #958e8e; border-radius: 5px; width:100%;height: 42px;display: flex;justify-content: center;align-items: center;">
+                                            <input style="width: 100%  ;" class="otp" type="" placeholder="- - -"
+                                                id="mobileotp5" #mobileotp5
+                                                (keyup)="(mobileotp5.value.length == 3) ? mobileotp6.focus() : ''"
+                                                onKeyPress="if(this.value.length==3) return false;" maxlength="3">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row mt-4">
+                                    <div class="col-sm-6">
+                                        <span style="font-size: 17px;font-weight: 500;">Expiry Date</span>
+                                        <p style="font-size: 12px;color: #958e8e;border-radius: 5px; ">Enter The
+                                            Expiration Date On The Card</p>
+                                    </div>
+                                    <div class="col-sm-6">
+                                        <div style="display: flex;">
+                                            <div
+                                                style="border: 1px solid #958e8e;border-radius: 5px; width:100%;height: 42px;display: flex;justify-content: center;align-items: center;">
+                                                <input style="width: 47%  ;" class="otp" type="" placeholder="- -"
+                                                    id="mobileotp5" #mobileotp5
+                                                    (keyup)="(mobileotp5.value.length == 2) ? mobileotp6.focus() : ''"
+                                                    onKeyPress="if(this.value.length==3) return false;" maxlength="2">
+                                            </div>&nbsp;&nbsp;&nbsp;&nbsp;<span
+                                                style="display: flex;align-items: center;justify-content: center;font-size: 20px;font-weight: 500;">/</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                                            <div
+                                                style="border: 1px solid #958e8e;border-radius: 5px; width:100%;height: 42px;display: flex;justify-content: center;align-items: center;">
+                                                <input style="width: 47%  ;" class="otp" type="" placeholder="- -"
+                                                    id="mobileotp5" #mobileotp5
+                                                    (keyup)="(mobileotp5.value.length == 2) ? mobileotp6.focus() : ''"
+                                                    onKeyPress="if(this.value.length==3) return false;" maxlength="2">
+                                            </div>
+                                        </div>
+                                    </div>
+
+
+                                    <div class="mt-4">
+                                        <div>
+                                            <span style="font-size: 17px;font-weight: 500;">Enter Card Holder
+                                                Name</span>
+                                        </div>
+                                        <div class="mt-3"
+                                            style="border: 1px solid #958e8e;height: 42px;border-radius: 5px;display: flex;align-items: center;">
+                                            <input type="text"
+                                                style="outline: none;width: 100%;border: none;border-radius: 5px;">
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4">
+                                        <button class="pay">Pay Now</button>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                        </div>
+                        <div class="col-sm-4">
+                            <br><br><br>
+                            <div style="background-color: #ecf0f3;height: auto;padding: 10px;position: relative;">
+                                <br><br><br><br><br><br>
+                                <div style="display: flex;padding: 10px;" *ngFor="let payment of paymentInfo">
+                                    <div>
+                                        <ul style="list-style: none;padding: 0;margin: 0;" class="paymentleft">
+                                            <li>Company</li>
+                                            <li>Order Number</li>
+                                            <li>Product</li>
+                                            <li>VAT(20%)</li>
+                                            <!-- <li>Price</li> -->
+
+                                        </ul>
+                                    </div>
+                                    <div style="margin-left: auto;">
+                                        <ul style="list-style: none;padding: 0;margin: 0;" class="paymentright">
+                                            <li>{{payment.companyName}}</li>
+                                            <li>{{payment.orderId}}</li>
+                                            <li>{{payment.product}}</li>
+                                            <li>{{payment.gst}}</li>
+                                            <!-- <li>{{payment.price}}</li> -->
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div
+                                    style="height: 23px;width: 100%;position: relative;border-bottom: 1px dashed #959292;">
+                                    <div style="position: absolute;left: -13%;height: 30px;width: 30px;
+                                      background-color: #fff;border-radius: 50%;top: 28%;">
+
+                                    </div>
+                                    <div style="position: absolute;right: -13%;height: 30px;width: 30px;
+                                      background-color: #fff;border-radius: 50%;top: 28%;">
+
+                                    </div>
+                                </div>
+                                <br>
+                                <div style="display: flex;">
+                                    <div>
+                                        <p style="font-size: 12px;
+                                        font-weight: 500;
+                                        color: #7a7979;">You have to pay</p>
+                                        <span style="font-size: 25px;
+                                        font-family: 'FontAwesome';
+                                        font-weight: 700;">1200 ₹ /-</span>
+                                    </div>
+                                    <div style="margin-left: auto;display: flex;align-items: center;">
+                                        <i class="fa fa-clipboard"></i>
+                                    </div>
+                                </div>
+
+
+                                <div
+                                    style="position: absolute;top: -16%; background-color: #fff; width: 70%;left: 15%;border-radius: 5%; box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;">
+                                    <br>
+                                    <div class="container">
+                                        <div style="display: flex;">
+                                            <div>
+                                                <img src="../../assets/cources/sim card.png" alt="" style="width: 25%;">
+                                            </div>
+                                            <div style="margin-left: auto;">
+                                                <i class="fa solid fa-wifi"></i>
+                                            </div>
+                                        </div>
+                                        <br><br><br>
+                                        <div *ngFor="let payment of cardInfo">
+                                            <span>{{payment.cardholder}}</span>
+                                            <p>{{payment.cardnumber}}</p>
+
+
+
+                                            <div style="display: flex;" class="mt-3">
+                                                <div>
+                                                    <span>{{payment.cardexpiry}}</span>
+                                                </div>
+                                                <div style="margin-left: auto;">
+                                                    <i class="fa brands fa-cc-mastercard" style="color: #9f9f2c;"></i>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+                                    </div>
+                                </div>
+
+
+
+
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Understood</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- course Registration modal -->
+
+
+
+
+
+
+<!-- <button (click)="toggleData()">Toggle Data</button>
+
+<div *ngIf="showData">
+  Display your data here
+  hello
+</div> -->

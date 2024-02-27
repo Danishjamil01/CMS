@@ -1,0 +1,35 @@
+<br><br><br>
+<section style="margin-top: 42px;">
+<div class="container">
+    <p><i class="fa fa-home"></i>/STUDENT</p>
+</div>
+
+<div class="container">
+    <div class="student" style="text-align: center;position: relative;">
+        <h2 style="font-size: 45px;font-weight: 700;letter-spacing: 1px;">OUR SUCCESSFUL STUDENTS</h2>
+    </div>
+    <br>
+    <div class="row">
+        <div class="col-sm-3 mt-3" *ngFor="let student of studentInfo">
+            <div style="border: 1px solid #dad6d6;" class="over">
+                <div style="position: relative;" class="count">
+                    <img src="{{student.img}}" alt=""
+                        style="width: 100%; border-bottom: 1px solid #dad6d6;">
+                <div class="overlay">
+                    <p>Click Here To See There Details</p>
+                </div>
+                    </div>
+                <div style="padding: 5px;">
+                    <p><span style="font-weight: 500;font-weight: 18px;">Name:</span>{{student.name}}</p>
+                    <p><span style="font-weight: 500;font-weight: 18px">Age:</span>{{student.age}}</p>
+                    <p><span style="font-weight: 500;font-weight: 18px">Grade:</span>{{student.grade}}</p>
+                    <p><span style="font-weight: 500;font-weight: 18px">Exam:</span>{{student.exam}}</p>
+                    <p><span style="font-weight: 500;font-weight: 18px">Group:</span>{{student.group}}</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+<br><br>
+</section>

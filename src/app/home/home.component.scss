@@ -1,0 +1,129 @@
+.scale:hover img {
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.apply-btn button:hover {
+    background-color: #838c48;
+    color: #fff !important;
+    transition: .5s;
+}
+
+.apply-btn button {
+    transition: .5s;
+}
+select:focus{
+    outline: none;
+}
+input:focus{
+    outline-color: #838c48;
+}
+// .cources h1::after {
+//     position: absolute;
+//     content: "";
+//     width: 93px;
+//     height: 4px;
+//     background-color: #1e5dc3;
+//     bottom: -5px;
+//     left: 47%;
+// }
+
+.all-cources {
+    border: none;
+    background: #838c48;
+    color: #fff;
+    border-radius: 0 40px 0 40px;
+    font-size: 13px;
+    height: 40px;
+    width: 50%;
+    transition: .5s;
+}
+
+.all-cources:hover {
+    border: 1px solid #838c48;
+    background: #fff;
+    color: #838c48;
+    transition: .5s;
+}
+
+.start {
+    border: none;
+    background:  #838c48;
+    color: #fff;
+    border-radius: 0 40px 0 40px;
+    font-size: 13px;
+    height: 40px;
+    width: 50%;
+    transition: .5s;
+}
+
+.start:hover {
+    border: 1px solid #838c48;
+    background: #fff;
+    color: #838c48;
+    transition: .5s;
+}
+
+.more button {
+    background: #838c48;
+    border: 1px solid #838c48;
+    color: #fff;
+    border-radius: 7px;
+    padding: 4px;
+    width: 10%;
+}
+.more{
+    display: flex;
+    justify-content: center;
+}
+.carousel-text h3{
+    font-size: 45px;
+    color: #fff;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+.join:hover{
+    background-color: #fff !important;
+    color: #838c48 !important;
+    transition: .5s;
+}
+.otp {
+    width: 100%!important;
+    height: 40px;
+    margin: 8px;
+    border: none;
+    background-color: transparent;
+}
+.otp:focus{
+    outline: none;
+}
+.otp{
+    text-align: center;
+}
+.otp::placeholder{
+    text-align: center;
+}
+
+.outlined {
+    outline: 2px solid red;
+    transition: .3s;
+  }
+  .pay{
+    width: 100%;
+    border: 1px solid blue;
+    background: blue;
+    color: #fff;
+    height: 42px;
+    border-radius: 5px;
+  }
+  .paymentleft li{
+    font-size: 16px;
+    color: #898282;
+    line-height: 30px;
+  }
+  .paymentright li{
+    font-size: 16px;
+    color: #0e0d0d;
+    font-weight: 500;
+    line-height: 30px;
+  }

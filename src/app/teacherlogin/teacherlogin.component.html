@@ -1,0 +1,465 @@
+<br><br><br>
+<section style="margin-top:20px;">
+    <div style="background-color: #4a7057;position: relative;">
+        <br>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6" style="background-color: #9bbda7;border-radius:20px 0 0 20px ;">
+                    <div style="display: flex;justify-content: center;">
+                        <img src="../../assets/teacher.gif" alt="" style="width: 100%;">
+                    </div>
+                </div>
+                <div class="col-sm-6" style="background-color: #fff;border-radius: 0 20px 20px 0;">
+                    <br><br>
+                    <div style="text-align: center;">
+                        <span style="font-family: serif;">CMS<i class="bi bi-award"></i></span>
+                    </div><br>
+                    <div>
+                        <h6 style="text-align: center;font-family: math;font-size: 20px;">Welcome to CMS</h6>
+                    </div>
+                    <br><br>
+
+                    <div class="login-container">
+                        <form (ngSubmit)="login()" #loginForm="ngForm">
+                            <div style="display: flex;align-items: center;justify-content: center;">
+                                <i class="fa fa-user"></i>&nbsp;&nbsp;
+                                <select name="role" id="role" [(ngModel)]="role" required
+                                    style="width: 70%;outline: none;border-top: none;border-right: none;border-left: none;">
+                                    <option value="">Select Role</option>
+                                    <option value="Instiitute Head">----Instiitute Head----</option>
+                                    <option value="Instiitute Instructor">----Instiitute Instructor----</option>
+                                </select>
+                            </div><br>
+                            <div style="display: flex;align-items: center;justify-content: center;">
+                                <i class="fa fa-user-circle"></i>&nbsp;&nbsp;
+                                <input style="width:70%;border-top: none;border-left: none;border-right: none;"
+                                    type="text" name="username" placeholder="Username or email" required
+                                    [(ngModel)]="username">
+                            </div><br>
+                            <div style="display: flex;align-items: center;justify-content: center;position: relative;">
+                                <i class="fa fa-lock"></i>&nbsp;&nbsp;
+                                <input style="width: 70%;border-top: none;border-left: none;border-right: none;"
+                                    type="password" [type]="passwordVisible? 'text' : 'password'" name="password"
+                                    placeholder="Password" required [(ngModel)]="password">
+                                <div (click)="openEye()" style="position: absolute;top: 0;right: 15%;display: none;"
+                                    id="open2">
+                                    <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                </div>
+                                <div (click)="closeEye()" style="position: absolute;top: 0;right: 15%;display: block;"
+                                    id="open1">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div style="position: absolute;right: 12%;cursor: pointer;">
+                                <p data-bs-toggle="modal" data-bs-target="#exampleModal1"
+                                    style="font-size: 14px;font-weight: 400;color: #14552b;">
+                                    Forgot password?</p>
+                            </div>
+                            <br><br>
+                            <div style="text-align: center;">
+                                <button type="submit" [disabled]="loginForm.invalid">Sign In</button>
+                            </div>
+
+                        </form>
+                        <p class="error" *ngIf="errorMessage">{{ errorMessage }}</p>
+                        <!-- <p class="error1" *ngIf="errorMessage1">{{ errorMessage1}}</p> -->
+                    </div>
+
+
+
+
+
+
+
+                    <br>
+                    <div style="display: flex;align-items: center;justify-content: center;">
+                        <div style="width: 25%;"></div>
+                        <div style="width: 20%;">
+                            <hr>
+                        </div>
+                        <div style="width: 10%;display: flex;align-items: center;justify-content: center;">or</div>
+                        <div style="width: 20%;">
+                            <hr>
+                        </div>
+                        <div style="width: 25%;"></div>
+                    </div>
+                    <br>
+                    <div style="text-align: center;">
+                        <span><i class="fa fa-google"></i> Sign in with Google</span>
+                    </div>
+                    <br>
+                    <div style="text-align: center;cursor: pointer;" (click)="openPopup()">
+                        <p style="font-size: 15px;font-weight: 400;">Are you new? <span
+                                style="color:#14552b;font-weight: 500;" data-bs-toggle="modal"
+                                data-bs-target="#createaccountmodal">Create an
+                                Account</span></p>
+                    </div>
+                    <br>
+                </div>
+            </div>
+        </div>
+        <br>
+
+
+    </div>
+</section>
+
+
+
+<!--forgot password Modal -->
+<div class="modal fade" id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true"
+    data-bs-backdrop="static">
+    <div class="modal-dialog modal-dialog-centered 	modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel"><i class="fa fa-arrow-left" (click)="turnleft()"
+                        id="arrow" style="display: none;"></i></h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="height: 60vh;">
+                <div class="row">
+                    <div class="col-sm-6">
+                        <div style="display: flex;align-items: center;justify-content: center;height: 60vh;"
+                            id="forgot-gif">
+                            <img src="../../assets/gif/forgotpassword.gif" alt="" style="width: 200px;height: 200px;">
+                        </div>
+                        <div style="display: none;" id="changed-gif">
+                            <div style="display: flex;align-items: center;justify-content: center;">
+                                <img src="../../assets/gif/passwordchanged.gif" alt=""
+                                    style="width: 200px;height: 200px;">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-sm-6">
+                        <div class="forgot-input">
+                            <div style="position: relative;">
+                                <div id="hide">
+                                    <h3>Reset Your Paasword</h3>
+                                    <span style="font-size: 14px;color: #979393;">The verification email will be
+                                        sent to
+                                        the
+                                        mailbox please check it.</span>
+                                </div>
+                                <div id="none" class="mt-3">
+                                    <label for="" style="font-weight: 600;">Email</label><br>
+                                    <input type="email" placeholder="Enter Your email here">
+                                    <div class="mt-4">
+                                        <button (click)="showReset()"
+                                            style="width: 40%;border: 1px solid #1e5dc3;color: #fff; background-color: #1e5dc3;border-radius: 30px;height: 35px;">Send</button>
+                                    </div>
+                                </div>
+                                <div style="position: absolute;top: 0;visibility: hidden;" id="reset">
+                                    <div style="text-align: center;">
+                                        <h1 style="font-size: 35px;font-weight: 500;">Enter OTP</h1>
+                                        <p style="color: rgb(99, 97, 97);">An 4 digit otp has been Sent to your
+                                            email
+                                            <br>
+                                        </p>
+                                    </div>
+                                    <div style="display: flex;justify-content: center;">
+                                        <input class="otp" type="" placeholder="0" id="mobileotp3" #mobileotp3
+                                            (keyup)="(mobileotp3.value.length == 1) ? mobileotp4.focus() : ''"
+                                            onKeyPress="if(this.value.length==1) return false;" maxlength="1">
+                                        <input class="otp" type="" placeholder="0" id="mobileotp4" #mobileotp4
+                                            (keyup)="(mobileotp4.value.length == 1) ? mobileotp5.focus() : ''"
+                                            onKeyPress="if(this.value.length==1) return false;" maxlength="1">
+                                        <input class="otp" type="" placeholder="0" id="mobileotp5" #mobileotp5
+                                            (keyup)="(mobileotp5.value.length == 1) ? mobileotp6.focus() : ''"
+                                            onKeyPress="if(this.value.length==1) return false;" maxlength="1">
+                                        <input class="otp" type="" placeholder="0" placeholder="0" id="mobileotp6"
+                                            #mobileotp6 onKeyPress="if(this.value.length==1) return false;"
+                                            maxlength="1">
+                                    </div>
+                                    <br>
+
+                                    <div style="text-align: center;">
+                                        <span>Didn't recieve OTP?</span>&nbsp;
+                                        <span style="text-decoration: underline;color: #2d95eb;">Resend</span>
+                                    </div>
+                                    <br>
+                                    <div style="text-align: center;">
+                                        <button (click)="navigateToreset()"
+                                            style="width: 90%; padding: 7px 0; background-color: #1e5dc3;color: #fff;border: transparent;border-radius: 4px;">Confirm
+                                            OTP</button>
+                                    </div>
+                                </div>
+                                <br><br>
+                                <div style="position: absolute;top: 0;display: none;width: 100%;" id="reset_password">
+                                    <div style="position: relative;">
+                                        <div id="hide-1">
+                                            <h3>Reset Password</h3>
+
+                                            <div class="mt-3">
+                                                <div style="position: relative;">
+                                                    <input type="password" name="" id="password"
+                                                        placeholder="Enter new password"
+                                                        [type]="passwordVisible3? 'text' : 'password'"
+                                                        style="width: 100%;padding: 8px;">
+                                                    <div (click)="openEye_1()"
+                                                        style="position: absolute;top: 20%;right: 1%;display: none;"
+                                                        id="open8">
+                                                        <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div (click)="closeEye_1()"
+                                                        style="position: absolute;top: 20%;right: 1%;display: block;"
+                                                        id="open7">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                                <div style="position: relative;" class="mt-3">
+                                                    <input type="password" name="" id="password"
+                                                        placeholder="Confirm new Password"
+                                                        [type]="passwordVisible4? 'text' : 'password'"
+                                                        style="width: 100%;padding: 8px;">
+                                                    <div (click)="openEye_2()"
+                                                        style="position: absolute;top: 20%;right: 1%;display: none;"
+                                                        id="open10">
+                                                        <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                                    </div>
+                                                    <div (click)="closeEye_2()"
+                                                        style="position: absolute;top: 20%;right: 1%;display: block;"
+                                                        id="open9">
+                                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <br>
+                                            <div style="text-align: center;">
+                                                <button class="rst-btn" (click)="resetSuccess()">Reset
+                                                    Password</button>
+                                            </div>
+                                        </div>
+
+                                        <div style="position: absolute;top: 0;display: none;" id="successful">
+                                            <div>
+                                                <div
+                                                    style="display: flex;align-items: center;justify-content: center;text-align: center;">
+                                                    <h4 style="font-size: 20px;">Your Password has been
+                                                        suuccessfully changed</h4>
+                                                </div>
+                                                <div style="display: flex;align-items: center;justify-content: center;">
+                                                    <img src="../../assets/gif/successful.gif" alt=""
+                                                        style="width: 50%;">
+                                                </div>
+
+                                                <div style="text-align: center;" class="mt-3">
+                                                    <button data-bs-dismiss="modal" class="rst-btn">Go to Login
+                                                        Page</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <button type="button" class="btn btn-primary">Save changes</button>
+            </div> -->
+        </div>
+    </div>
+</div>
+<!-- forgot password modal -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Modal -->
+<div class="modal fade" id="createaccountmodal" tabindex="-1" aria-labelledby="accountModal" aria-hidden="true">
+    <div class="modal-dialog modal-xl ">
+        <div class="modal-content" style="background-color: transparent;">
+            <div class="modal-body"
+                style="margin: 0;padding: 0;background-color: transparent !important;border-radius: 25px;">
+                <!-- institute_modal -->
+                <div style="background-color:transparent; width: 100%;max-height: 90vh;overflow-y: auto;border-radius: 25px;"
+                    id="openSignup">
+                    <div class="container" style="background-color: #9bbda7;width: auto;">
+                        <br>
+                        <div style="display: flex;justify-content: end;">
+                            <div data-bs-dismiss="modal" aria-label="Close" class="close-btn" style="border: 1px solid #98bda8; transition: .5s; position: relative; box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+            width: 40px;
+            height: 40px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 50%;">
+                                <i class="fa fa-close"></i>
+                                <div class="close" style="position: absolute;right: 100%;">
+                                    <span style="font-size: 16px;font-weight: 500;">Close</span>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <h5>Teachers Registration Form</h5>
+                        </div>
+                        <br>
+                        <div>
+                            <p style="margin: 0;padding: 0;">Personal Information <sup
+                                    style="color:red;font-weight: 600;">*</sup></p>
+                            <div style="display: flex;align-items: center;">
+                                <input type="text" placeholder="First Name"
+                                    style="width: 49%;">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                <input type="text" placeholder="Last Name" style="width: 49%;">
+                            </div>
+                            <div class="mt-2" style="display: flex;">
+                                <div style="width: 49%;">
+                                    <p style="padding: 0;margin: 0;">Recent Photo <sup
+                                            style="color:red;font-weight: 600;">*</sup></p>
+                                    <div
+                                        style="border: 1px dashed;display: flex;align-items: center;justify-content: center;">
+                                        <input type="file" (change)="onFileSelected($event)" #fileInput>
+                                        <img *ngIf="selectedImage" [src]="selectedImage" alt="Selected Image">
+
+                                        <br><br><br><br>
+                                    </div>
+                                    <span style="font-size: 12px;">Recent passport size photo here</span>
+                                </div>&nbsp;&nbsp;
+                                <div style="width: 49%;">
+                                    <div>
+                                        <p style="padding: 0;margin: 0;">Qualification<sup
+                                                style="color:red;font-weight: 600;">*</sup>
+                                        </p>
+                                        <input type="text" style="width: 100%;">
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="display: flex;">
+                                <div style="width: 49%;">
+                                    <span>Gender <sup style="color:red;font-weight: 600;">*</sup></span><br>
+                                    <select name="" id="" style="outline: none;width: 100%;height: 56%;">
+                                        <option value="Please Select">Please Select</option>
+                                        <option value="Male">Male</option>
+                                        <option value="Female">Female</option>
+                                        <option value="N/A">N/A</option>
+                                    </select>
+                                </div>&nbsp;&nbsp;
+                                <div style="width: 49%;">
+                                    <p style="padding: 0;margin: 0;">Age<sup style="color:red;font-weight: 600;">*</sup>
+                                    </p>
+                                    <input type="number" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="mt-2" style="display: flex;">
+                                <div style="width: 49%;">
+                                    <p style="padding: 0;margin: 0;">E-mail Address <sup
+                                            style="color:red;font-weight: 600;">*</sup></p>
+                                    <input type="email" style="width: 100%;">
+                                </div>&nbsp;&nbsp;
+                                <div style="width: 49%;">
+                                    <p style="padding: 0;margin: 0;">Contact<sup
+                                            style="color:red;font-weight: 600;">*</sup></p>
+                                    <input type="contact" style="width: 100%;">
+                                </div>
+                            </div>
+                            <div class="mt-3" style="display: flex;">
+                                <div style="width: 49%;">
+                                    <div style="position: relative;">
+                                        <input type="password" name="" id="password" placeholder="Password"
+                                            [type]="passwordVisible1? 'text' : 'password'" style="width: 100%;">
+                                        <div (click)="openEye1()"
+                                            style="position: absolute;top: 3px;right: 1%;display: none;" id="open4">
+                                            <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                        </div>
+                                        <div (click)="closeEye1()"
+                                            style="position: absolute;top: 3px;right: 1%;display: block;" id="open3">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>&nbsp;&nbsp;
+                                <div style="width: 49%;">
+                                    <div style="position: relative;">
+                                        <input type="password" name="" id="password" placeholder="Confirm Password"
+                                            [type]="passwordVisible2? 'text' : 'password'" style="width: 100%;">
+                                        <div (click)="openEye2()"
+                                            style="position: absolute;top: 3px;right: 1%;display: none;" id="open6">
+                                            <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                        </div>
+                                        <div (click)="closeEye2()"
+                                            style="position: absolute;top: 3px;right: 1%;display: block;" id="open5">
+                                            <i class="fa fa-eye" aria-hidden="true"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <p style="padding: 0;margin: 0;">Address<sup style="color:red;font-weight: 600;">*</sup>
+                                </p>
+                                <textarea name="" id="" rows="2" style="width: 100%;outline: none;"></textarea>
+                            </div>
+                            <div style="display: flex;" class="mt-2">
+                                <div style="width: 49%;">
+                                    <p style="padding: 0;margin: 0;font-size: 15px;">Classes you can teach <sup
+                                            style="color:red;font-weight: 600;">*</sup>
+                                    </p>
+                                    <input type="text" style="width: 100%;">
+                                </div>&nbsp;&nbsp;
+                                <div style="width: 49%;">
+                                    <p style="padding: 0;margin: 0;font-size: 15px;">Subjects you can teach <sup
+                                            style="color:red;font-weight: 600;">*</sup>
+                                    </p>
+                                    <select name="" id="" style="outline: none;width: 100%;height: 56%;">
+                                        <option value=""></option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="mt-2">
+                                <p style="padding: 0;margin: 0;">Any Experiance of teaching<sup
+                                        style="color:red;font-weight: 600;">*</sup></p>
+                                <input type="text" style="width: 100%;">
+                            </div>
+                            <br>
+                            <div>
+                                <h5>Terms and conditions</h5>
+                                <p style="padding: 0;margin: 0;">1. We only inform the registered teachers / tutors for
+                                    any
+                                    teaching
+                                    vacancy through phone call, or
+                                    via email, SMS.</p>
+                                <p style="padding: 0;margin: 0;">2. More details will be provided depending upon
+                                    teacher's
+                                    interest.</p>
+                                <p style="padding: 0;margin: 0;">3. Every teacher/Tutor will be charged 50% his/her only
+                                    first
+                                    month
+                                    salary / tution fees.</p>
+                            </div>
+                            <br>
+                            <div>
+                                <p style="padding: 0;margin: 0;color:red;font-weight: 600;">*</p>
+                                <span>I Agree</span><br>
+                                <input type="radio" placeholder="" (click)="optionOff()"><br>
+                                <span>Other</span><br>
+                                <input type="radio" (click)="openOption()"><br>
+                                <input type="text" placeholder="Please type what do u want to say" style="opacity: 0;"
+                                    id="option">
+                            </div>
+                        </div>
+                        <div style="text-align: center;">
+                            <button
+                                style="    padding: 7px 46px;border: none;background: #333;border-radius: 25px;color: #fff;width: 100%;">Sign
+                                In</button>
+                        </div>
+                        <br><br><br><br><br><br><br>
+                    </div>
+                    <br>
+                </div>
+                <!-- institute_modal -->
+            </div>
+        </div>
+    </div>
+</div>

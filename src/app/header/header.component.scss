@@ -1,0 +1,121 @@
+.navbar-collapse li a {
+    font-family: Sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    text-transform: capitalize !important;
+}
+
+.navbar-collapse .nav-item {
+    margin: 10px;
+    line-height: 30px;
+    transition: .5s;
+}
+.nav-link{
+    text-transform: capitalize !important;
+}
+
+.navbar-collapse li a:hover {
+    transition: .5s;
+    color: #61CE70;
+}
+
+.features ul {
+    list-style: none;
+}
+
+.features ul {
+    padding: 0 25px;
+    margin: 0;
+}
+
+.features ul li {
+    font-size: 17px;
+    font-weight: 400;
+}
+
+.features {
+    visibility: hidden;
+}
+
+.dropdown1:hover .features {
+    visibility: visible;
+}
+
+.course li {
+    list-style: none;
+    padding: 6px 30px;
+    border-bottom: 1px solid #c2bebe;
+}
+
+.course {
+    border-top: 3px solid green;
+    visibility: hidden;
+    transition: .5s;
+}
+
+.dropdown2:hover .course {
+    visibility: visible;
+    transition: .5s;
+}
+
+.search {
+    background: #227AFF;
+    height: 45px;
+    width: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: .5s;
+}
+
+.search:hover {
+    background-color: #fff;
+    border: 2px solid #227AFF;
+
+    & i {
+        color: #456da8 !important;
+    }
+
+    transition: .5s;
+}
+
+.log-in {
+    background-color: #fff;
+    padding: 0;
+    width: 100%;
+    margin: 0;
+    border-radius: 5px;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+
+.log-in li {
+    padding: 2px;
+    transition: .5s;
+}
+
+.log-in li:hover {
+    background-color: #888;
+
+    & {
+        color: #fff;
+        transition: .5s;
+    }
+}
+
+
+
+
+
+input:focus{
+    outline: none !important;
+}
+
+.dynamic-text-color {
+    color: black !important; /* Default text color */
+  }
+  
+  .dynamic-text-color.white-bg {
+    color: white !important; /* Text color when background is white */
+  }

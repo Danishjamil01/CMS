@@ -1,0 +1,418 @@
+<br><br><br>
+<section style="margin-top: 20px;">
+    <div style="background-color: #c6d7cc;position: relative;">
+        <br>
+        <div class="container">
+            <div class="row" style="border-radius: 20px !important;">
+                <div class="col-sm-6" style="background-color:#e4fded;border-radius: 20px 0 0 20px;">
+                    <div id="logingif">
+                        <div style="display: flex;align-items: center;justify-content: center;">
+                            <img src="../../assets/study2.gif" alt="" width="90%">
+                        </div>
+                        <br>
+                        <div style="text-align: center;">
+                            <h5>Distance Learning Programs</h5>
+                            <span>Attend live and recorded classes <br> at your own conveneince.</span>
+                            <br><br><br><br>
+                        </div>
+                    </div>
+
+                    <!-- forgot password model -->
+                    <div id="forgotgif" style="display: none;">
+                        <div style="display: flex;align-items: center;justify-content: center;">
+                            <img src="../../assets/gif/forgotpassword2.gif" alt="" width="80%">
+                        </div>
+                        <br>
+                        <div style="text-align: center;">
+                            <h5>Distance Learning Programs</h5>
+                            <span>Attend live and recorded classes <br> at your own conveneince.</span>
+                            <br><br><br><br>
+                        </div>
+                    </div>
+                    <!-- forgot password model -->
+                </div>
+
+
+
+
+
+
+
+
+                <div class="col-sm-6" style="background-color: #fff;border-radius: 0 20px 20px 0;">
+                    <br><br><br>
+                    <div style="text-align: center;">
+                        <span style="font-family: serif;">CMS<i class="bi bi-award"></i></span>
+                    </div><br><br>
+                    <div>
+                        <h6 style="text-align: center;font-family: math;font-size: 20px;">Welcome to CMS</h6>
+                    </div>
+                    <br>
+                    <div id="loginmodel" class="mt-4">
+                        <div class="user" style="position: relative;">
+                            <div style="display: flex;align-items: center;justify-content: center;">
+                                <input type="text" placeholder="Username or email" style="width:70%;">
+                            </div><br>
+                            <div style="display: flex;align-items: center;justify-content: center;position: relative;">
+                                <input type="password" placeholder="Password" style="width:70%;" id="password"
+                                    [type]="passwordVisible? 'text' : 'password'">
+                                <div (click)="openEye()" style="position: absolute;top: 0;right: 15%;display: none;"
+                                    id="open2">
+                                    <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                </div>
+                                <div (click)="closeEye()" style="position: absolute;top: 0;right: 15%;display: block;"
+                                    id="open1">
+                                    <i class="fa fa-eye" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div style="position: absolute;right: 15%;cursor: pointer;">
+                                <p style="font-size: 14px;font-weight: 400;color: #14552b;" (click)="forgotModal()">
+                                    Forgot
+                                    password?</p>
+                            </div>
+                        </div>
+                        <br><br><br>
+                        <div style="text-align: center;">
+                            <button style="padding: 7px 46px;
+                            border: none;
+                            background: #333;
+                            border-radius: 25px;
+                            color: #fff;" (click)="navigateTostudentprofile()">Sign In</button>
+                        </div>
+                        <br>
+                        <div style="display: flex;align-items: center;justify-content: center;">
+                            <div style="width: 25%;"></div>
+                            <div style="width: 20%;">
+                                <hr>
+                            </div>
+                            <div style="width: 10%;display: flex;align-items: center;justify-content: center;">or</div>
+                            <div style="width: 20%;">
+                                <hr>
+                            </div>
+                            <div style="width: 25%;"></div>
+                        </div>
+                        <br>
+                        <div style="text-align: center;">
+                            <span><i class="fa fa-google"></i> Sign in with Google</span>
+                        </div>
+                        <br>
+                        <div style="text-align: center;cursor: pointer;" (click)="openPopup()">
+                            <p style="font-size: 15px;font-weight: 400;">Are you new? <span
+                                    style="color:#14552b;font-weight: 500;" data-bs-toggle="modal"
+                                    data-bs-target="#staticBackdrop">Create an Account</span></p>
+                        </div>
+                    </div>
+                    <!-- forgotpasswordmodal -->
+                    <div class="container mt-4" style="display: none;" id="requestotp">
+                        <div (click)="backToLogin()">
+                            <span style="font-size: 14px;
+                            font-weight: 500;
+                            color: blue;cursor: pointer;">Back to Login</span>
+                        </div>
+
+                        <h4 style="font-size: 30px;font-weight: 700">Forgot Password</h4>
+                        <p style="font-size: 14px;
+                        letter-spacing: 1px;
+                        font-weight: 400;">Send otp to your mail to reset your password</p>
+                        <div class="mt-3">
+                            <span style="    font-size: 17px;
+                        font-weight: 600;">Email <sup>*</sup></span>
+                        </div>
+                        <div class=""
+                            style="border: 1px solid #6e6d6d;height: 42px;border-radius: 5px;display: flex;align-items: center;">
+                            <input type="email" placeholder="Enter your email here"
+                                style="width: 100%;border: none;border-radius: 5px;text-align: center;">
+                        </div>
+                        <div class="mt-3">
+                            <button (click)="gotoresetpassword()"
+                                style="width: 100%;border: 1px solid #6444ea;background-color: #6444ea;padding: 5px;border-radius: 5px;color: #fff;">GET
+                                OTP</button>
+                        </div>
+                    </div>
+                    <!-- forgotpasswordmodal -->
+                    <div class="container" style="display: none;" id="newpassword">
+                        <div (click)="backToLogin()">
+                            <span style="font-size: 14px;
+                            font-weight: 500;
+                            color: blue;cursor: pointer;">Back to Login</span>
+                        </div>
+                        <h4 style="font-size: 30px;font-weight: 700">Reset Password</h4>
+                        <p style="font-size: 14px;
+                        letter-spacing: 1px;
+                        font-weight: 400;">Please choose your new password <sup>*</sup></p>
+
+                        <div class="mt-3" style="display: flex;">
+                            <div style="width: 48%;">
+                                <span>New Password <sup>*</sup></span>
+                                <div class="mt-2" style="display: flex;align-items: center;position: relative;">
+                                    <input type="password" placeholder="New Password"
+                                        style="width:100%;height: 40px;border-radius: 5px;" id="password"
+                                        [type]="passwordVisible01? 'text' : 'password'">
+                                    <div (click)="openEye01()"
+                                        style="position: absolute;top:17%;right: 2%;display: none;" id="open02">
+                                        <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                    </div>
+                                    <div (click)="closeEye01()"
+                                        style="position: absolute;top: 17%;right: 2%;display: block;" id="open01">
+                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <div style="width: 48%;">
+                                <span>Confirm New Password <sup>*</sup></span>
+                                <div class="mt-2"
+                                    style="display: flex;align-items: center;justify-content: center;position: relative;">
+                                    <input type="password" placeholder="Confirm New Password"
+                                        style="width:100%;height: 40px;border-radius: 5px;" id="password"
+                                        [type]="passwordVisible02? 'text' : 'password'">
+                                    <div (click)="openEye02()"
+                                        style="position: absolute;top: 17%;right: 2%;display: none;" id="open04">
+                                        <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                    </div>
+                                    <div (click)="closeEye02()"
+                                        style="position: absolute;top: 17%;right: 2%;display: block;" id="open03">
+                                        <i class="fa fa-eye" aria-hidden="true"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <br>
+                        <div>
+                            <button (click)="savePassword()"
+                                style="width: 100%;border: 1px solid #6444ea;background-color: #6444ea;padding: 5px;border-radius: 5px;color: #fff;">Save
+                                New Password</button>
+                        </div>
+                    </div>
+
+                    <!-- created succesfull -->
+                    <div id="succcessful" style="display: none;">
+                        <div style="display: flex;align-items: center;justify-content: center;">
+                            <img src="../../assets/gif/successful.gif" alt="" style="width: 25%;">
+                        </div>
+                        <p style="text-align: center;">Your new passwword has been created succcessful go back to login!
+                        </p>
+                        <br><br>
+                        <div style="display: flex;align-items: center;justify-content: center;">
+                            <button (click)="backToLogin()"
+                                style="width: 25%;border: 1px solid #6444ea;background-color: #6444ea;padding: 5px;border-radius: 0 40px 0 40px;color: #fff;">Back
+                                to Login</button>
+                        </div>
+                    </div>
+                    <!-- created succesfull -->
+
+                    <!-- otprecieved -->
+                    <div class="container" style="display: none;text-align: center;" id="otprecieved">
+                        <div style="display: flex;justify-content: center;">
+                            <img src="../../assets/gif/otp.gif" alt="">
+                        </div>
+                        <div (click)="backToLogin()">
+                            <span style="font-size: 14px;
+                        font-weight: 500;
+                        color: blue;cursor: pointer;">Back to Login</span>
+                        </div>
+                        <h4 style="font-size: 30px;font-weight: 700">Enter OTP</h4>
+                        <div class="mt-3"
+                            style="display: flex;position: relative; align-items: center;justify-content: center; border-radius: 5px;  width:100%;height: 42px;">
+                            <input class="otp" type="" placeholder="_" id="mobileotp3" #mobileotp3
+                                (keyup)="(mobileotp3.value.length == 4) ? mobileotp4.focus() : ''"
+                                onKeyPress="if(this.value.length==4) return false;" maxlength="4">
+                            <input class="otp" type="" placeholder="_" id="mobileotp4" #mobileotp4
+                                (keyup)="(mobileotp4.value.length == 4) ? mobileotp5.focus() : ''"
+                                onKeyPress="if(this.value.length==4) return false;" maxlength="4">
+                            <input class="otp" type="" placeholder="_" id="mobileotp5" #mobileotp5
+                                (keyup)="(mobileotp5.value.length == 4) ? mobileotp6.focus() : ''"
+                                onKeyPress="if(this.value.length==4) return false;" maxlength="4">
+                            <input class="otp" type="" placeholder="_" placeholder="_" id="mobileotp6" #mobileotp6
+                                onKeyPress="if(this.value.length==4) return false;" maxlength="4">
+                        </div>
+                        <div class="mt-3" style="display: flex;justify-content: center;">
+                            <span>Didn't recieve otp?</span>
+                            <p style="font-size: 17px;
+                            font-weight: 500;
+                            color: blue;">resend otp</p>
+                        </div>
+                        <div class="mt-3" (click)="confirmotp()">
+                            <button
+                                style="width: 50%;border: 1px solid #6444ea;background-color: #6444ea;padding: 5px;border-radius: 5px;color: #fff;">Confirm
+                                OTP</button>
+                        </div>
+                    </div>
+                    <!-- otprecieved -->
+                    <br>
+                </div>
+                <br><br><br><br><br>
+            </div>
+        </div>
+        <br>
+    </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- login-modal -->
+<!-- Button trigger modal -->
+
+
+<!-- Modal -->
+<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" style="z-index: 99999;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="staticBackdropLabel">Modal title</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body" style="background-color: #f8f9fd;">
+                <div id="createaccount">
+                    <div style="display: flex;align-items: center;justify-content: center;">
+                        <img src="../../assets/signup1.gif" alt="">
+                    </div>
+                    <br>
+                    <br>
+                    <div class="login-inpt">
+                        <input type="text" placeholder="Full Name" style="width: 100%;">
+                        <input type="text" placeholder="Email Address" style="width: 100%;">
+                        <div style="position: relative;">
+                            <input type="password" name="" id="password" placeholder="Password"
+                                [type]="passwordVisible1? 'text' : 'password'" style="width: 100%;">
+                            <div (click)="openEye1()" style="position: absolute;top: 15px;right: 0%;display: none;"
+                                id="open4">
+                                <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                            </div>
+                            <div (click)="closeEye1()" style="position: absolute;top: 15px;right: 0%;display: block;"
+                                id="open3">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </div>
+                        </div>
+                        <div style="position: relative;">
+                            <input type="password" name="" id="password" placeholder="Confirm Password"
+                                [type]="passwordVisible2? 'text' : 'password'" style="width: 100%;">
+                            <div (click)="openEye2()" style="position: absolute;top: 15px;right: 0%;display: none;"
+                                id="open6">
+                                <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                            </div>
+                            <div (click)="closeEye2()" style="position: absolute;top: 15px;right: 0;display: block;"
+                                id="open5">
+                                <i class="fa fa-eye" aria-hidden="true"></i>
+                            </div>
+                        </div><br>
+                        <div style="text-align: center;">
+                            <button (click)="createDone()" style="padding: 5px 0;width: 50%;
+                        border: none;
+                        background: #d2c472;
+                        border-radius: 25px;
+                        color: #fff;">Sign Up</button>
+                        </div><br>
+                        <div style="display: flex;align-items: center;justify-content: center;">
+                            <p>Already have an account? &nbsp;<span style="color: #4fc076;cursor: pointer;"
+                                    data-bs-dismiss="modal">Log in</span></p>
+                        </div>
+                    </div>
+                </div>
+
+                <div id="accountcreated" style="display: none;">
+                    <div style="display: flex;align-items: center;justify-content: center;">
+                        <img src="../../assets/gif/account-created.gif" alt="" style="width: 100%;">
+                    </div>
+                    <div style="display: flex;align-items: center;justify-content: center;">
+                        <button data-bs-dismiss="modal"
+                            style="width: 40%;border: 1px solid #d2c472;background-color: #d2c472;padding: 5px;border-radius: 0 40px 0 40px;color: #fff;">Move
+                            to Login</button>
+                    </div>
+                </div>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- login-modal -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- pageloader -->
+<!-- Button trigger modal -->
+  
+  <!-- Modal -->
+  <!-- <div class="modal fade" id="exampleModal01" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-xl">
+        <div class="modal-body">
+          <div style="display: flex;align-items: center;justify-content: center;">
+            <img src="../../assets/gif/loading.gif" alt="" style="width: 50%;">
+          </div>
+        </div>
+       
+    </div>
+  </div> -->
+<!-- pageloader -->
+
+
+
+
+
+
+
+
+
+<!--<div class="signup" style="display: flex;align-items: center;justify-content: center;">
+                                <div>
+                                    <input type="text" placeholder="Full Name" style="width: 100%;">
+                                    <input type="text" placeholder="Email Address" style="width: 100%;">
+                                    <div style="display: flex;">
+                                        <div style="position: relative;">
+                                            <input type="password" name="" id="password" placeholder="Password"
+                                                [type]="passwordVisible1? 'text' : 'password'">
+                                            <div (click)="openEye1()"
+                                                style="position: absolute;top: 12px;right: 8%;display: none;"
+                                                id="open4">
+                                                <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                            </div>
+                                            <div (click)="closeEye1()"
+                                                style="position: absolute;top: 12px;right: 8%;display: block;"
+                                                id="open3">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                        <div style="position: relative;">
+                                            <input type="password" name="" id="password" placeholder="Confirm Password"
+                                                [type]="passwordVisible2? 'text' : 'password'">
+                                            <div (click)="openEye2()"
+                                                style="position: absolute;top: 12px;right: 8%;display: none;"
+                                                id="open6">
+                                                <i class="fa fa-eye-slash" aria-hidden="true"></i>
+                                            </div>
+                                            <div (click)="closeEye2()"
+                                                style="position: absolute;top: 12px;right: 8%;display: block;"
+                                                id="open5">
+                                                <i class="fa fa-eye" aria-hidden="true"></i>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div> -->

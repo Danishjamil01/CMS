@@ -1,0 +1,27 @@
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 0;
+    width: 100% !important;
+    overflow: hidden;
+    transition: .5s ease;
+    align-items: center !important;
+    justify-content: center !important;
+    padding: 10px;
+    opacity: 0;
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.over:hover .overlay {
+    height: 100% !important;
+    background-color: rgba(0, 0, 0, 0.7) !important;
+    opacity: 1;
+}
+
+
+

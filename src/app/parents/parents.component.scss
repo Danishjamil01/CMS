@@ -1,0 +1,84 @@
+// .point{
+//     border: none;
+//     background: #179f8b;
+//     color: #fff;
+//     padding: 8px;
+//     width: 20%;
+//     border-radius: 5px;
+//     font-size: 20px;
+//     font-weight: 600
+// }
+// .score{
+//     border: none;
+//     background: #179f8b;
+//     color: #fff;
+//     padding: 6px 14px;
+//     border-radius: 5px;
+// }
+
+.fireworks {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 100px auto;
+  }
+  
+  .firework {
+    position: absolute;
+    width: 0;
+    height: 0;
+    border-top: 30px solid #f00;
+    border-right: 30px solid transparent;
+    border-bottom: 30px solid transparent;
+    border-left: 30px solid transparent;
+    animation: fireworks 3s infinite;
+  }
+  
+  @keyframes fireworks {
+    0% {
+      opacity: 0;
+      transform: scale(0);
+    }
+    
+    50% {
+      opacity: 1;
+      transform: scale(1);
+    }
+    
+    100% {
+      opacity: 0;
+      transform: scale(0);
+    }
+  }
+  
+  .firework:nth-child(1) {
+    top: 0;
+    left: 0;
+    animation-delay: 0s;
+  }
+  
+  .firework:nth-child(2) {
+    top: 0;
+    right: 0;
+    animation-delay: 0.5s;
+  }
+  
+  .firework:nth-child(3) {
+    bottom: 0;
+    left: 0;
+    animation-delay: 1s;
+  }
+  
+  .firework:nth-child(4) {
+    bottom: 0;
+    right: 0;
+    animation-delay: 1.5s;
+  }
+  
+  .firework:nth-child(5) {
+    top: -30px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation-delay: 2s;
+  }
+  

@@ -1,0 +1,35 @@
+.user input {
+    border: none;
+    border-bottom: 1px solid #696969;
+}
+
+input:focus {
+    outline: none;
+}
+
+.fa-google {
+    background: conic-gradient(from -45deg, #ea4335 110deg, #4285f4 90deg 180deg, #34a853 180deg 270deg, #fbbc05 270deg) 73% 55%/150% 150% no-repeat;
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
+}
+
+.login-inpt input {
+    border: none;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    padding: 7px 10px;
+    border-radius: 25px;
+    margin: 7px;
+    border: 1px solid #ebe5e5;
+    background-color: transparent;
+}
+.otp {
+    width: 40px !important;
+    height: 40px;
+    margin: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    border: none !important;
+    border-radius: 4px;
+    text-align: center;
+}

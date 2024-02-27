@@ -1,0 +1,59 @@
+.subjct li {
+    color: #555;
+    font-size: 14px;
+    line-height: 30px;
+}
+
+.enroll:hover {
+    background-color: #fff !important;
+    color: #838c48 !important;
+    border: none;
+    transition: .5s;
+}
+
+.enroll {
+    transition: .5s;
+}
+
+.scale1:hover {
+    transform: translateY(-10%) !important;
+    transition: .5S;
+}
+
+.scale2:hover {
+    transform: translateY(10%) !important;
+    transition: .5S;
+}
+
+.scale3:hover {
+    transform: translateY(-10%) !important;
+    transition: .5S;
+}
+
+.scale4:hover {
+    transform: translateY(10%) !important;
+    transition: .5S;
+}
+
+.scale1 {
+    transition: .5s;
+}
+
+.scale2 {
+    transition: .5s;
+}
+
+.scale3 {
+    transition: .5s;
+}
+
+.scale4 {
+    transition: .5s;
+}
+
+.shadow {
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.shadow li{
+    cursor: pointer;
+}

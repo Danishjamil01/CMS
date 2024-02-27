@@ -1,0 +1,126 @@
+<section>
+    <div style="background-color: #000;">
+        <h2 style="color: #000;">mm</h2>
+    </div>
+    <div style="display: flex;" class="mt-1">
+        <div style="width: 21%;z-index: 999;" class="dashboard-item" id="dashitem">
+            <ul>
+                <div style="background-color: #999;" id="hamheader">
+                    <div class="" style="display: flex;align-items: center;justify-content: center;">
+                        <div style="display: flex;">
+                            <img src="../../assets/admin/admin logo.png" alt="" style="width: 35%;"  >
+                        </div>
+                        <div>
+                            <div class="hamburger" (click)="slideLeft()">
+                                <div class="burger1"></div>
+                                <div class="burger2 mt-1"></div>
+                                <div class="burger3 mt-1"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="display: flex;align-items: center;" class="filter-tab" id="dashboard"
+                    (click)="ChangeFilterTab('dashboard')">
+                    <i class="fa fa-dashboard " id="icons"></i>
+                    <li class="tab">Dashboard</li>
+                </div>
+                <div style="display: flex;align-items: center;" class="filter-tab" id="manageSession"
+                    (click)="ChangeFilterTab('manageSession')">
+                    <i class="fa fa-cog " id="icons"></i>
+                    <li class="tab">Mannage Session</li>
+                </div>
+                <div style="display: flex;align-items: center;" class="filter-tab" id="student"
+                    (click)="ChangeFilterTab('student')">
+                    <i class="fa fa-user " id="icons"></i>
+                    <li class="tab">Student</li>
+                </div>
+                <div style="display: flex;align-items: center;" class="filter-tab" id="teacher"
+                    (click)="ChangeFilterTab('teacher')">
+                    <i class="fa fa-user " id="icons"></i>
+                    <li class="tab">Teacher</li>
+                </div>
+                <div style="display: flex;align-items: center;" class="filter-tab" id="parent"
+                    (click)="ChangeFilterTab('parent')">
+                    <i class="fa fa-user " id="icons"></i>
+                    <li class="tab">Parents</li>
+                </div>
+                <div style="display: flex;align-items: center;" class="filter-tab" id="examList"
+                    (click)="ChangeFilterTab('examList')">
+                    <i class="fa fa-graduation-cap " id="icons"></i>
+                    <li class="tab">Exam List</li>
+                </div>
+                <div style="display: flex;align-items: center;" class="filter-tab" id="assignments"
+                    (click)="ChangeFilterTab('assignments')">
+                    <i class="fa fa-tasks " id="icons"></i>
+                    <li class="tab">Assignments</li>
+                </div>
+                <div style="display: flex;align-items: center;" class="filter-tab" id="Attendance"
+                    (click)="ChangeFilterTab('Attendance')">
+                    <i class="fa fa-clock-o " id="icons"></i>
+                    <li class="tab">Attendance</li>
+                </div>
+                <div style="display: flex;align-items: center;" class="filter-tab" id="payments"
+                    (click)="ChangeFilterTab('payments')">
+                    <i class="fa fa-credit-card " id="icons"></i>
+                    <li class="tab">Payments</li>
+                </div>
+                <div style="display: flex;align-items: center;" class="filter-tab" id="classes"
+                    (click)="ChangeFilterTab('classes')">
+                    <i class="fa fa-dashboard " id="icons"></i>
+                    <li class="tab">Classes</li>
+                </div>
+                <div style="display: flex;align-items: center;" class="filter-tab" id="subjects"
+                    (click)="ChangeFilterTab('subjects')">
+                    <i class="fa fa-book " id="icons"></i>
+                    <li class="tab">Subjects</li>
+                </div>
+                <div style="display: flex;align-items: center;" class="filter-tab" id="events"
+                    (click)="ChangeFilterTab('events')">
+                    <i class="fa fa-calendar " id="icons"></i>
+                    <li class="tab">Events</li>
+                </div>
+            </ul>
+
+            
+            </div>
+        </div>
+        <div style="width: 79%;" id="allpage">
+            <section *ngIf="showTabBar==='dashboard'">
+                <app-a-home-dashboard></app-a-home-dashboard>
+            </section>
+            <section *ngIf="showTabBar==='manageSession'">
+                <app-managesession></app-managesession>
+            </section>
+            <section *ngIf="showTabBar==='student'">
+                <app-managestudent></app-managestudent>
+            </section>
+            <section *ngIf="showTabBar==='teacher'">
+                <app-manageteacher></app-manageteacher>
+            </section>
+            <section *ngIf="showTabBar==='parent'">
+                <app-parents></app-parents>
+            </section>
+            <section *ngIf="showTabBar==='examList'">
+                <app-exam></app-exam>
+            </section>
+            <section *ngIf="showTabBar==='assignments'">
+                <app-assignments></app-assignments>
+            </section>
+            <section *ngIf="showTabBar==='Attendance'">
+                <app-attendance></app-attendance>
+            </section>
+            <section *ngIf="showTabBar==='payments'">
+                <app-payments></app-payments>
+            </section>
+            <section *ngIf="showTabBar==='classes'">
+                <app-classes></app-classes>
+            </section>
+            <section *ngIf="showTabBar==='subjects'">
+                <app-subjects></app-subjects>
+            </section>
+
+            <section *ngIf="showTabBar==='events'">
+                <app-events></app-events>
+            </section>
+        </div>
+</section>
